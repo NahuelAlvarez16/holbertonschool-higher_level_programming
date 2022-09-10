@@ -2,4 +2,4 @@
 for dozen in range(0, 9):
     for unit in range(dozen + 1, 10):
         print("{:d}{:d}".format(dozen, unit), end="")
-        print("," if dozen == 9 and unit == 9 else "\n", end="")
+        print("\n" if dozen == 8 and unit == 9 else ", ", end="")
