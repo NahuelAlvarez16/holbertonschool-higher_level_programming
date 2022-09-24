@@ -2,10 +2,6 @@
 """ 3-say_my_name module """
 
 
-import string
-from typing import Type
-
-
 def say_my_name(first_name, last_name=""):
     """ function to concat a name with last name"""
     if type(first_name) != str:
