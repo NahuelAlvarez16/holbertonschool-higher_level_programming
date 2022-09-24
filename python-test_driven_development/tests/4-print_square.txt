@@ -14,9 +14,6 @@ Traceback (most recent call last):
     raise TypeError("size must be an integer")
 TypeError: size must be an integer
 
->>> print_square(0)
-
-
 >>> print_square(-2)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
