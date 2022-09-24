@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ 0-add_integer module """
 
+
 def add_integer(a, b=98):
     """ function to add two numbers """
     if type(a) is float:
