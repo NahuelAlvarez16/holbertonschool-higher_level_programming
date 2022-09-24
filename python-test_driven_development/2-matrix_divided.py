@@ -3,6 +3,7 @@
 
 
 def matrix_divided(matrix, div):
+    """ function to divide a matrix with a number """
     if type(div) is float:
         div = int(div)
     if type(div) != int and type(div) != float:
@@ -23,7 +24,5 @@ def matrix_divided(matrix, div):
         for x in range(len(matrix[i])):
             if type(matrix[i][x]) != int and type(matrix[i][x]) != float:
                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-            if type(matrix[i][x]) is float:
-                matrix[i][x] = int(matrix[i][x])
             new_matrix[i].append(matrix[i][x] / div)
     
