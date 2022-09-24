@@ -9,5 +9,5 @@ def text_indentation(text):
     for c in text:
         print("{}".format(c), end="")
         if c in ".:?":
-            print()
+            print("\n")
     
