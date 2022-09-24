@@ -24,5 +24,5 @@ def matrix_divided(matrix, div):
         for x in range(len(matrix[i])):
             if type(matrix[i][x]) != int and type(matrix[i][x]) != float:
                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-            new_matrix[i].append(matrix[i][x] / div)
+            new_matrix[i].append(matrix[i][x] / float(div))
     
