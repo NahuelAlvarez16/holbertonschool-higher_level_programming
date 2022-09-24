@@ -16,9 +16,3 @@ TypeError: add_integer() missing 1 required positional argument: 'a'
 
 >>> add_integer(0,)
 98
-
->>> add_integer(,0)
-  File "<stdin>", line 1
-    add_integer(,0)
-                ^
-SyntaxError: invalid syntax
