@@ -12,15 +12,15 @@ def matrix_divided(matrix, div):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     matrix_len = len(matrix[0])
     new_matrix = []
-    for i in enumerate(matrix):
-        if len(matrix[i]) != matrix_len:
+    for i, row in enumerate(matrix):
+        if len(row) != matrix_len:
                 raise TypeError("Each row of the matrix must have the same size")
-        matrix_len = len(matrix[i])
-        if type(matrix[i]) is not list:
+        matrix_len = len(row)
+        if type(row) is not list:
             raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
         new_matrix.append([])
-        for x in range(len(matrix[i])):
-            if type(matrix[i][x]) != int and type(matrix[i][x]) != float:
+        for x in range(len(row)):
+            if type(row[x]) != int and type(row[x]) != float:
                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-            new_matrix[i].append(round(matrix[i][x] / float(div), 2))
+            new_matrix[i].append(round(row[x] / float(div), 2))
     
