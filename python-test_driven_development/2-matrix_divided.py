@@ -23,4 +23,4 @@ def matrix_divided(matrix, div):
             if type(row[x]) != int and type(row[x]) != float:
                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
             new_matrix[i].append(round(row[x] / float(div), 2))
-    
+    return new_matrix
