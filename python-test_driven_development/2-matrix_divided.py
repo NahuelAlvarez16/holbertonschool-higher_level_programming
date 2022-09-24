@@ -4,8 +4,6 @@
 
 def matrix_divided(matrix, div):
     """ function to divide a matrix with a number """
-    if type(div) is float:
-        div = int(div)
     if type(div) != int and type(div) != float:
                 raise TypeError("div must be a number")
     if div == 0:
@@ -14,7 +12,7 @@ def matrix_divided(matrix, div):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     matrix_len = len(matrix[0])
     new_matrix = []
-    for i in range(len(matrix)):
+    for i in enumerate(matrix):
         if len(matrix[i]) != matrix_len:
                 raise TypeError("Each row of the matrix must have the same size")
         matrix_len = len(matrix[i])
@@ -24,5 +22,5 @@ def matrix_divided(matrix, div):
         for x in range(len(matrix[i])):
             if type(matrix[i][x]) != int and type(matrix[i][x]) != float:
                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-            new_matrix[i].append(matrix[i][x] / float(div))
+            new_matrix[i].append(round(matrix[i][x] / float(div), 2))
     
