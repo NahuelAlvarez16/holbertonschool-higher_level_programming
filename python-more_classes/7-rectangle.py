@@ -51,7 +51,7 @@ class Rectangle:
                 if h > 0:
                     str += '\n'
                 for w in range(self.width):
-                    str += '#'
+                    str += self.print_symbol
         return str
 
     def __repr__(self):
