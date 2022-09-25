@@ -43,7 +43,8 @@ class Rectangle:
         str = ""
         if self.height and self.width:
             for h in range(self.height):
+                if h > 0:
+                    str += '\n'
                 for w in range(self.width):
                     str += '#'
-                str += '\n'
         return str
