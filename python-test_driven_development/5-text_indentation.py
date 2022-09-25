@@ -14,4 +14,3 @@ def text_indentation(text):
             if c in ".:?":
                 print("\n")
                 line_break = True
-    
