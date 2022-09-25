@@ -8,7 +8,7 @@ pepe
 
 >>> text_indentation("   pepe. Oscar")
 pepe.
-
+<BLANKLINE>
 Oscar
 
 >>> text_indentation(1221)
