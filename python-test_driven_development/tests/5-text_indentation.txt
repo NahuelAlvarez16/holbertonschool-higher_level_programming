@@ -6,8 +6,7 @@ The "5-text_indentation" module
 >>> text_indentation("pepe")
 pepe
 
->>> text_indentation("pepe")
-pepetext_indentation("   pepe. Oscar")
+>>> text_indentation("   pepe. Oscar")
 pepe.
 
 Oscar
