@@ -2,8 +2,6 @@
 """ Rectangle module """
 
 
-from hashlib import new
-
 
 class Rectangle:
     """ Rectangle class """
