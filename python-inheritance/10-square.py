@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Rectangle Class"""
 Rectangle = __import__('9-rectangle.py').Rectangle
 
 
