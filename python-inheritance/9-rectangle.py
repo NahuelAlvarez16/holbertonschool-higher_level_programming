@@ -7,9 +7,9 @@ class Rectangle(BaseGeometry):
     """ Rectangle """
     def __init__(self, width, height):
         self.integer_validator("width", width)
-        __width = width
+        self.__width = width
         self.integer_validator("height", height)
-        __height = height
+        self.__height = height
         self.m_area = height * width
 
     def area(self):
@@ -18,5 +18,4 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         super().__init__()
-        str = f"[Rectangle] {self.__width}/{self.__height}"
-        return str
+        return f"[Rectangle] {self.__width}/{self.__height}"
