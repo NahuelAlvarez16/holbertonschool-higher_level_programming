@@ -14,12 +14,9 @@ The "1-my_list" module
 
 >>> MyList([2, 4, 6]).print_sorted()
 [2, 4, 6]
-[2, 4, 6]
 
 >>> MyList([]).print_sorted()
 []
-[]
 
 >>> MyList(["hello", "world"]).print_sorted()
-['hello', 'world']
 ['hello', 'world']
