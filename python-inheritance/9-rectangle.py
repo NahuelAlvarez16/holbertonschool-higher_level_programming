@@ -18,4 +18,5 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         super().__init__()
-        return f"[Rectangle] {self.__width}/{self.__height}"
+        str = f"[Rectangle] {self.__width}/{self.__height}"
+        return str
