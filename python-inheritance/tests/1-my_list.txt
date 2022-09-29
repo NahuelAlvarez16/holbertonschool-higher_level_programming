@@ -10,7 +10,7 @@ The "1-my_list" module
 [3, 2, 6]
 
 >>> MyList([3, 2, 6]).print_sorted()
-[3, 2, 6]
+[2, 3, 6]
 
 >>> MyList([2, 4, 6]).print_sorted()
 [2, 4, 6]
