@@ -67,6 +67,12 @@ class Rectangle(Base):
         """
         return self.width * self.height
 
+    def __str__(self):
+        """
+        The `__str__` function is a special function that is called when you print an object
+        """
+        print("[Rectangle] {}/{} - {}/{}".format(self.x, self.y, self.width, self.height))
+
     def display(self):
         """
         It prints a rectangle of the specified height and width.
