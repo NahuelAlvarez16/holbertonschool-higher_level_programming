@@ -79,8 +79,12 @@ class Rectangle(Base):
         """
         It prints a rectangle of the specified height and width.
         """
+        for i in range(self.y):
+                print()
         for i in range(self.height):
-            for i in range(self.width):
+            for x in range(self.width):
+                print(" ", end="")
+            for x in range(self.x):
                 print("#", end="")
             print()
         if self.height == 0:
