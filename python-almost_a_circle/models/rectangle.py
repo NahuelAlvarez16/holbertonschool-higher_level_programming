@@ -69,9 +69,10 @@ class Rectangle(Base):
 
     def __str__(self):
         """
-        The `__str__` function is a special function that is called when you print an object
+        The `__str__` function is a special function that is called
+        when you print an object
         """
-        print("[Rectangle] {}/{} - {}/{}".format(self.x, self.y, self.width, self.height))
+        print("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
 
     def display(self):
         """
