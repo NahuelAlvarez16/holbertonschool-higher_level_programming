@@ -83,9 +83,9 @@ class Rectangle(Base):
                 print()
         for i in range(self.height):
             for x in range(self.width):
-                print(" ", end="")
-            for x in range(self.x):
                 print("#", end="")
+            for x in range(self.x):
+                print(" ", end="")                
             print()
         if self.height == 0:
             print()
