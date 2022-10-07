@@ -47,6 +47,7 @@ class Base:
         """
         return json.loads(json_string) if json_string is not None else []
     
+    @classmethod
     def create(cls, **dictionary):
         """
         Create a dummy instance of the class, update it with the dictionary, and return it.
