@@ -52,5 +52,5 @@ class Base:
         Create a dummy instance of the class, update it with the dictionary, and return it.
         """
         dummy = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
-        dummy.update(dictionary)
+        dummy.update(**dictionary)
         return dummy
