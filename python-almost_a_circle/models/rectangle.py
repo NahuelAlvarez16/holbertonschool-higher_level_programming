@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Rectangle class that inherits from Base"""
-from operator import le
 from models.base import Base
 
 
