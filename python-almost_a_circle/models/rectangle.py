@@ -124,5 +124,5 @@ class Rectangle(Base):
         It returns a dictionary
         representation of a Rectangle.
         """
-        return {'x': self.x, 'y': self.y, 'id':self.id,
-            'height': self.height, 'width': self.width}
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.height, 'width': self.width}
