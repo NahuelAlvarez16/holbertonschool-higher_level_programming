@@ -22,3 +22,30 @@ class Square(Rectangle):
         The __str__ method returns a string representation of the object
         """
         return f'[Square] ({self.id}) {self.x}/{self.y} - {self.width}'
+
+    def update(self, *args, **kwargs):
+        """
+        If there are arguments,
+        then assign them to the appropriate attribute. Otherwise, assign the keyword
+        arguments to the appropriate attribute.
+        """
+        if len(args) > 0:
+            for idx, arg in enumerate(args):
+                if idx == 0:
+                    self.id = arg
+                elif idx == 1:
+                    self.size = arg
+                elif idx == 2:
+                    self.x = arg
+                elif idx == 3:
+                    self.y = arg
+        else:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    self.id = value
+                elif key == 'size':
+                    self.size = value
+                elif key == 'x':
+                    self.x = value
+                elif key == 'y':
+                    self.y = value
