@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Rectangle class that inherits from Base"""
+from operator import le
 from models.base import Base
 
 
@@ -65,11 +66,17 @@ class Rectangle(Base):
         """
         It updates the values of the class Rectangle
         """
-        self.id = args[0]
-        self.width = args[1]
-        self.height = args[2]
-        self.x = args[3]
-        self.y = args[4] 
+        for idx, arg in enumerate(args):
+            if idx == 0:
+                self.id = arg
+            elif idx == 1:
+                self.width = arg
+            elif idx == 2:
+                self.height = arg
+            elif idx == 3:
+                self.x = arg
+            elif idx == 4:
+                self.y = arg
 
     def area(self):
         """
