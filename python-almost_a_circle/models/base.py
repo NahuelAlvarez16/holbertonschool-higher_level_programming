@@ -2,7 +2,9 @@
 """Base class"""
 
 
+from genericpath import exists
 import json
+import os
 
 
 class Base:
@@ -56,3 +58,14 @@ class Base:
         dummy = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @staticmethod
+    def load_from_file(cls):
+        """
+        Loads a list of instances from a file.
+        """
+        file_path = cls.__name__ + ".json"
+        if os.path.exists(file_path) is not exists:
+            return []
+        with open(file_path, 'w') as f:
+            return cls.from_json_string(f.read())
