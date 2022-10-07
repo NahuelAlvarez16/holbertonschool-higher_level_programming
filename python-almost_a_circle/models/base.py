@@ -46,11 +46,12 @@ class Base:
         the json_string, otherwise return an empty list.
         """
         return json.loads(json_string) if json_string is not None else []
-    
+
     @classmethod
     def create(cls, **dictionary):
         """
-        Create a dummy instance of the class, update it with the dictionary, and return it.
+        Create a dummy instance of the class, update it with the dictionary,
+        and return it.
         """
         dummy = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
         dummy.update(**dictionary)
