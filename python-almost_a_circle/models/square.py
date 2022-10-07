@@ -26,8 +26,8 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """
         If there are arguments,
-        then assign them to the appropriate attribute. Otherwise, assign the keyword
-        arguments to the appropriate attribute.
+        then assign them to the appropriate attribute. Otherwise,
+        assign the keyword arguments to the appropriate attribute.
         """
         if len(args) > 0:
             for idx, arg in enumerate(args):
