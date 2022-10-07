@@ -61,6 +61,16 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
+    def update(self, *args):
+        """
+        It updates the values of the class Rectangle
+        """
+        self.id = args[0]
+        self.width = args[1]
+        self.height = args[2]
+        self.x = args[3]
+        self.y = args[4] 
+
     def area(self):
         """
         "Given a Rectangle object, return the area of the rectangle."
