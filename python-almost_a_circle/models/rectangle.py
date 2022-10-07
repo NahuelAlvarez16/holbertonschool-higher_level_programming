@@ -62,21 +62,34 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         It updates the values of the class Rectangle
         """
-        for idx, arg in enumerate(args):
-            if idx == 0:
-                self.id = arg
-            elif idx == 1:
-                self.width = arg
-            elif idx == 2:
-                self.height = arg
-            elif idx == 3:
-                self.x = arg
-            elif idx == 4:
-                self.y = arg
+        if len(args) > 0:
+            for idx, arg in enumerate(args):
+                if idx == 0:
+                    self.id = arg
+                elif idx == 1:
+                    self.width = arg
+                elif idx == 2:
+                    self.height = arg
+                elif idx == 3:
+                    self.x = arg
+                elif idx == 4:
+                    self.y = arg
+        else:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    self.id = value
+                elif key == 'width':
+                    self.width = value
+                elif key == 'height':
+                    self.height = value
+                elif key == 'x':
+                    self.x = value
+                elif key == 'y':
+                    self.y = value
 
     def area(self):
         """
