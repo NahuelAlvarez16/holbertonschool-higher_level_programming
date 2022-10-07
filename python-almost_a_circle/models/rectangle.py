@@ -118,3 +118,11 @@ class Rectangle(Base):
             print()
         if self.height == 0:
             print()
+
+    def to_dictionary(self):
+        """
+        It returns a dictionary
+        representation of a Rectangle.
+        """
+        return {'x': self.x, 'y': self.y, 'id':self.id,
+            'height': self.height, 'width': self.width}
