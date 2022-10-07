@@ -62,10 +62,14 @@ class Base:
     @staticmethod
     def load_from_file(cls):
         """
-        Loads a list of instances from a file.
+        This function creates a list of instances from a json file.
         """
         file_path = cls.__name__ + ".json"
         if os.path.exists(file_path) is not exists:
             return []
         with open(file_path, 'w') as f:
-            return cls.from_json_string(f.read())
+            obj = []
+            data = cls.from_json_string(f.read())
+            for d in data:
+                obj.append(d)
+            return cls.create(obj)
