@@ -38,3 +38,11 @@ class Base:
                 for obj in list_objs:
                     objs.append(obj)
                 f.write(cls.to_json_string(obj))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        If the json_string is not None, return the json.loads() of
+        the json_string, otherwise return an empty list.
+        """
+        return json.loads(json_string) if json_string is not None else []
