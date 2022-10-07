@@ -59,7 +59,7 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
-    @staticmethod
+    @classmethod
     def load_from_file(cls):
         """
         This function creates a list of instances from a json file.
