@@ -71,6 +71,6 @@ class Base:
                 data = cls.from_json_string(f.read())
                 for d in data:
                     objs.append(cls.create(**d))
-                return obj
+                return objs
         else:
             return []
