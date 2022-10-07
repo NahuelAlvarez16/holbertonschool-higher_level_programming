@@ -2,6 +2,9 @@
 """Base class"""
 
 
+import json
+
+
 class Base:
     """ Base """
     __nb_objects = 0
@@ -12,3 +15,13 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """
+        This function converts a list of dictionaries to a JSON string.
+        """
+        if list_dictionaries == None or len(list_dictionaries) == 0:
+            return "[]"
+        else:
+            return json.dumps(list_dictionaries)
