@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# Importing the MySQLdb module and the sys module. It is then connecting to the database and creating
+# a cursor. It is then executing the query and printing the results.
 if __name__ == "__main__":
     import MySQLdb
     import sys
