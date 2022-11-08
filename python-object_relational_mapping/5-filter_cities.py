@@ -16,5 +16,5 @@ if __name__ == "__main__":
             'name': sys.argv[4]
         })
     rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    for idx, row in enumerate(rows):
+        print(row, end=" ," if idx == (len(rows) - 1) else "\n")
