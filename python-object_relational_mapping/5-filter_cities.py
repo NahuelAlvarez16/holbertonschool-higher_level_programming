@@ -12,7 +12,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute("SELECT cities.id, cities.name, states.name FROM cities LEFT\
         JOIN states ON states.id = cities.state_id WHERE\
-        BINARY name = %(name)s", {
+        BINARY states.name = %(name)s", {
             'name': sys.argv[4]
         })
     rows = cur.fetchall()
