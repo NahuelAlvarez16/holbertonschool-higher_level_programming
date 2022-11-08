@@ -17,4 +17,4 @@ if __name__ == "__main__":
         })
     rows = cur.fetchall()
     for idx, row in enumerate(rows):
-        print(row[1], end="\n" if idx == (len(rows) - 1) else " ,")
+        print(row[1], end="\n" if idx == (len(rows) - 1) else ", ")
