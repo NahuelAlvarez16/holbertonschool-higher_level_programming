@@ -7,13 +7,14 @@ if __name__ == "__main__":
     import sys
     from sqlalchemy.orm import sessionmaker, aliased
     from model_state import Base, State
-    from sqlalchemy import update
 
-    engine = create_engine("mysql://{}:{}@localhost/{}"
+    engine = create_engine("mysql://{}:{}@127.0.0.1/{}"
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
 
     states = session.query(State).filter(State.name.like("%a%"))
-    session.delete(states)
-    session.commit()
+    for row in states:
+        session.delete(row)
+    if states is not None:
+        session.commit()
