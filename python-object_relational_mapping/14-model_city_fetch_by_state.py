@@ -18,3 +18,4 @@ if __name__ == "__main__":
     cities = session.query(City, State).filter(City.state_id == State.id).all()
     for row in cities:
         print("{}: ({}) {}".format(row.State.name, row.City.id, row.City.name))
+        
